@@ -7,7 +7,7 @@ const routes = require('./routes/index');
 const apiRouter = require('./routes/apiRouter');
 const {notFound, developmentErrors, productionErrors} = require('./handlers/errorHandlers');
 
-require('dotenv').config({ path: 'variables.env' });
+require('dotenv').config({path: 'variables.env'});
 
 var port = process.env.PORT || 3000;
 
@@ -21,20 +21,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.static(pablicPath));
 
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json({type:'*/*'}));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json({type: '*/*'}));
 
 app.use('/api/', apiRouter);
 app.use('/', routes);
 
 app.use(notFound);
 
-if (process.env.NODE_ENV==='development') {
+if (process.env.NODE_ENV === 'development') {
 	app.use(developmentErrors);
 }
 
 app.use(productionErrors);
 
-app.listen(port, ()=>{
+app.listen(port, () => {
 	console.log(`listening on port: ${port}`);
 });

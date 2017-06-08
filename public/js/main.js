@@ -1,6 +1,6 @@
 angular.module('DomainsApp', []).
-controller('appCtrl', function($scope, $http, $timeout) {
-	const apiUrl = 'https://sheltered-cove-78030.herokuapp.com/api/';
+controller('appCtrl', function($scope, $http, $timeout, $location) {
+	const apiUrl = $location.absUrl().indexOf('http://localhost:3000')>-1  ? 'http://localhost:3000/api/' : 'https://sheltered-cove-78030.herokuapp.com/api/';
 	$scope.domainsResult = {};
 	$scope.domainName = '';
 	$scope.showDomainList = false;

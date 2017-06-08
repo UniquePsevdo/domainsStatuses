@@ -6,7 +6,7 @@ block content
                 span(ng-bind="serverErrorMessage")
             div.row
                 div.input-field.col.s10
-                    input(type="text" ng-model="domainName" ng-focus="errorMessage=''")#search.validate
+                    input(type="text" ng-model="domainName" ng-keyup="$event.keyCode == 13 && getDomains()")#search.validate
                     label(for="search") Put domain name without tld
                 div.col.s2
                     button(type="submit" ng-click="getDomains()" ng-disabled="domainName===''").btn.btn-large.waves-effect.waves-light Search
