@@ -1,0 +1,19 @@
+html
+    head
+        title Domains Search
+        link(link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection")
+        link(type="text/css" rel="stylesheet" href="css/main.css"  media="screen,projection")
+        script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js")
+        meta(charset='utf-8')
+    body(ng-app="DomainsApp" ng-controller="appCtrl").ng-cloak
+        script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+        script(type="text/javascript" src="js/materialize.min.js")
+        script(type="text/javascript" src="js/main.js")
+        header(style='padding-top:0px')
+            div.footer-copyright.page-footer.card-panel.indigo.darken-1.white-text
+                div.container
+                    h5(style='margin:0px')='Domains searching for .com,.net,.org,.us,.info,.biz,.me,.co,co.uk TLDs'
+        div.container
+            block content
+

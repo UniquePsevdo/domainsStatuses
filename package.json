@@ -1,0 +1,24 @@
+{
+  "name": "free-domain-test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js"
+  },
+  "engines": {
+    "node": "7.10.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cross-env": "^5.0.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.2",
+    "request-promise": "^4.2.1"
+  }
+}
