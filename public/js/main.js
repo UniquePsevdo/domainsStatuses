@@ -1,6 +1,6 @@
 angular.module('DomainsApp', []).
 controller('appCtrl', function($scope, $http, $timeout) {
-	const apiUrl = 'http://localhost:3000/api/'; // todo: set uri after deploy
+	const apiUrl = 'https://sheltered-cove-78030.herokuapp.com/';
 	$scope.domainsResult = {};
 	$scope.domainName = '';
 	$scope.showDomainList = false;
